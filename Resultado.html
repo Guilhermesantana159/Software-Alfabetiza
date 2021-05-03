@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="sortcut icon" href="imagens/Capturar.PNG" type="image/PNG /">
+    <title>Alfabetiza</title>
+</head>
+<body>
+<section id="principal">
+    <table id="resultado">
+        <img src="imagens/resultado fundo.png" id="resultado" alt="Não foi possível carregar a imagem :(" >
+        <caption id="tituloresultado">Resultado</caption>
+        <tr><td id="esquerdo">Nome:</td><td id="nome" class="direito"></td></tr>
+        <tr><td id="esquerdo">Turma:</td><td id="turma" class="direito"></td></tr>
+        <tr><td id="esquerdo">Figuras Respondidas:</td><td id="figuras" class="direito"></td></tr>
+        <tr><td id="esquerdo">Acertos:</td><td id="acertos" class="direito"></td></tr>
+        <tr><td id="esquerdo">Erros:</td><td id="erros" class="direito"></td></tr>
+        <tr><td id="esquerdo">Tempo Total:</td><td id="tempo" class="direito"></td></tr>
+        <tr><td id="esquerdo">Figuras Erradas:</td><td id="erradas" class="direito"></td></tr>
+        <tr><td id="esquerdo">Feedback:</td><td id="feed" class="direito"></td></tr>
+
+    </table>
+ <script >  
+    var i = 0; 
+    var acertos = 0;
+    var erros = 0;
+    var erradas= [];
+    var certo = [];
+    var nomealuno = localStorage.getItem("nome");
+    var turmaaluno = localStorage.getItem("turma");
+    var figurasaluno = localStorage.getItem("figuras");
+    var respostaaluno = localStorage.getItem("resposta");
+    var figurasaluno = Number(figurasaluno);
+    var tempo = localStorage.getItem("tempo");
+    var matriz = localStorage.getItem("matriz");
+    document.getElementById("nome").innerHTML = nomealuno ;
+    document.getElementById("turma").innerHTML = turmaaluno;
+    document.getElementById("figuras").innerHTML = figurasaluno ;
+    document.getElementById("tempo").innerHTML = tempo + " Minutos" ;
+    var respostaaluno = respostaaluno.toLowerCase();
+    var respostaaluno = respostaaluno.split(",")
+    var matriz = matriz.split(",")
+    matriz.reverse();
+    function comparador(){
+       while(i<figurasaluno){
+            if (matriz[i]==respostaaluno[i]){
+                acertos = acertos + 1
+                i= i+1
+            }else{
+                erros = erros + 1
+                erradas.push(respostaaluno[i]);
+                certo.push(matriz[i]);
+                i= i+1
+            } 
+       } 
+    }
+    function avaliação(){
+        porcentagem = (100*acertos)/figurasaluno
+        var porcentagem = porcentagem.toFixed(0); 
+        if(porcentagem>60){
+            document.getElementById("feed").innerHTML = "O aluno obteve a aprovação com: " + porcentagem +"% de acertos" ; 
+        }else{
+            document.getElementById("feed").innerHTML = "O aluno obteve a reprovação com: " + porcentagem +"% de acertos" ;
+        }
+    }
+    comparador();
+    avaliação();
+    document.getElementById("acertos").innerHTML = acertos ;
+    document.getElementById("erros").innerHTML = erros; 
+    document.getElementById("erradas").innerHTML = "Correto: " + certo + "/" +  " Resposta: " + erradas ;
+ </script>   
+</section>
+</body>
+</html>

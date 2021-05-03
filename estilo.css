@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap');
+/*Pagina index*/
+
+body{
+    background-image: url("imagens/imagemfundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    position: absolute;
+    top: -100pt;
+    left: 300pt;
+}
+
+h1{
+    font-size: 105pt;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 5pt 5pt 5pt  black;
+
+}
+span#titulo{
+    color: white;
+    font-size: 35pt;
+    display: block;
+    position: relative;
+    left: 70pt;
+    padding: 5pt;
+    font-weight: bolder;
+}
+h3{
+    color: white;
+    font-size: 15pt;
+}
+section#formulario{
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 200pt;
+    left: 320pt;
+    background-color: rgba(0, 0, 0, 0.685);
+    border-radius: 10pt;
+    width: 400pt;
+    padding: 10pt;
+ 
+}
+fieldset#principal{
+    border-radius: 5pt;
+    padding: 10pt;
+}
+button#iniciar{  
+    position: absolute;
+    top: 260pt;
+    left: 140pt;
+    width: 160pt;
+    height: 40pt;
+    background-color: white;
+    font-size: 25pt;
+    padding: 3pt;
+    border-radius: 7pt;
+    border-color: lime;
+    border-spacing: 10pt;
+    font-family: 'Fredoka One', cursive;
+    color: lime;
+    border-width: 3pt;
+    box-shadow: 2pt 2pt 2pt 2pt black;
+    cursor: pointer;
+}
+button#iniciar:hover{
+    transition: 1s;
+    background-color: lime;
+    color: white;
+}
+a#sair{
+    position: absolute;
+    top: 180pt;
+    left: 220pt;
+    width: 30pt;
+    height: 15pt;
+    background-color: white;
+    font-size: 15pt;
+    padding: 12pt;
+    border-radius: 7pt;
+    font-family: 'Fredoka One', cursive;
+    color: red;
+    box-shadow: 2pt 2pt 2pt 2pt black;
+    cursor: pointer;
+}
+a#sair:hover{
+    transition: 1s;
+    background-color: red;
+    color: white;
+}
+button#botão{
+    position: absolute;
+    top: 180pt;
+    left: 290pt;
+    width: 105pt;
+    height: 40pt;
+    background-color: white;
+    font-size: 15pt;
+    border-radius: 7pt;
+    font-family: 'Fredoka One', cursive;
+    box-shadow: 2pt 2pt 2pt 2pt black;
+    cursor: pointer;
+    padding: 10pt;
+    color: green;
+}
+button#botão:hover{
+    transition: 1s;
+    background-color: green;
+    color: white;
+}
+input#nome{
+    background: rgb(173, 173, 173);
+    border-radius: 5pt;
+    height: 20pt;
+    font-size: 15pt;
+    width: 300pt;
+    font-weight: bold;
+}
+input#turma{
+    background-color: rgb(173,173,173);
+    border-radius: 5pt;
+    height: 20pt;
+    font-size: 15pt;
+    width: 100pt;
+    font-weight: bold;
+    margin-bottom: 15pt;
+}
+input#numero{
+    background-color: rgb(173,173,173);
+    border-radius: 5pt;
+    height: 20pt;
+    font-size: 15pt;
+    width: 30pt;
+    font-weight: bold;
+    margin-bottom: 15pt;
+    margin-left: 20pt;
+    text-align: center;
+    
+} 
+/*Página Principal*/
+
+section#principal{
+    display: block;
+    width: 80%;
+    height: 110vh;
+    background-color: rgba(222, 228, 220, 0.836);
+    margin: -5pt 100pt;
+    border-radius: 10pt;
+}
+div#imagemresposta{
+    position: absolute;
+    display: block;
+    left: 210pt;
+    top: 40pt;
+    width: 420pt;
+    height: 230pt;
+    border-radius: 10pt;
+    background-color: rgba(26, 160, 21, 0.747);
+    box-shadow: 2pt 2pt 2pt 1pt black;
+    border-style: dashed;
+    border-color: rgb(36, 236, 36);
+    border-width: 5pt;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+input#respostaaluno{
+    width: 270pt;
+    height: 25pt;
+    position: absolute;
+    border-radius: 30pt;
+    border-color: rgb(53, 33, 167);
+    border-width: 3pt;
+    background-color: rgba(129, 115, 179, 0.534);
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    top: 300pt;
+    left: 210pt;
+    font-family: 'Fredoka One', cursive;
+}
+button#enviarresposta{
+    position: absolute;
+    background-color: blue;
+    color: white;
+    border-radius: 5pt;
+    padding: 4pt;
+    font-size: 15pt;
+    font-family: 'Fredoka One', cursive;
+    border-width: 5pt;
+    border-color: blue;
+    left: 500pt;
+    top: 300pt;
+}
+button#enviarresposta:hover{
+    transition: 1s;
+    background-color: white;
+    color: blue;
+}
+div#informações{
+    position: absolute;
+    background-color: white;
+    border-radius: 10pt;
+    width: 220pt;
+    height: 160pt;
+    top: 55pt;
+    left: 660pt;
+    box-shadow: 2pt 2pt 2pt 1pt black;
+    border-width: 20pt;
+    border-color: black;
+    border-style: groove;
+    border-width: 5pt;
+}
+table#informações{
+    padding: 5pt;
+}
+caption#titulo{
+    padding-top: 5pt;
+    position: relative;
+    font-size: 25pt;
+    font-family: 'Fredoka One', cursive;
+    padding-bottom: -5pt;
+}
+td#esquerdo{
+    font-size: 13pt;
+    padding-top: 5pt;
+    font-family: 'Fredoka One', cursive;
+}
+td.direito{
+    font-size: 13pt;
+    padding-left: 1pt;
+    font-family: 'Fredoka One', cursive;
+    padding-top: 10pt;
+    font-weight: normal;
+    color: rgb(88, 86, 86);
+}
+
+
+/*Pagina Escolha*/
+table#escolha{
+    position: absolute;
+    top: 10pt;
+    width: 77%;
+    height: 80%;
+    padding-left: 25pt;
+}
+caption#tituloescolha{
+    font-size: 50pt;
+    color: black;
+    text-shadow: 1pt 1pt 1pt white;
+    font-family: 'Fredoka One', cursive;
+    padding-bottom: 15pt;
+}
+td.imagem{
+    background-color: white;  
+    border-radius: 5pt;
+    box-shadow: 3pt 3pt 1pt 0.5pt black;
+    border-width: 4pt;
+    border-color:  green;
+    border-style: solid;
+}
+button#enviarfigura:hover{
+    background-color: white;
+    color: blue;
+    transition: 1s;
+}
+button#enviarfigura{
+    position: absolute;
+    background-color: blue;
+    color: white;
+    border-radius: 5pt;
+    padding: 4pt;
+    font-size: 15pt;
+    font-family: 'Fredoka One', cursive;
+    border-width: 5pt;
+    border-color: blue;
+    left: 800pt;
+    top: 500pt;
+}
+h2{
+    position: absolute;
+    top: 480pt;
+    left: 180pt;
+    font-size: 25pt;
+    font-family: 'Fredoka One', cursive;
+}
+span#selecionadas{
+    position: absolute;
+    top: 502pt;
+    left: 455pt;
+    font-size: 25pt;
+    font-family: 'Fredoka One', cursive;
+    color: red;
+}
+button#voltar{
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 5pt;
+    padding: 4pt;
+    font-size: 15pt;
+    font-family: 'Fredoka One', cursive;
+    border-width: 5pt;
+    border-color: red;
+    left: 720pt;
+    top: 500pt;
+}
+button#voltar:hover{
+    background-color: white;
+    color: red;
+    transition: 1s;
+}
+/* Resultado*/
+table#resultado{
+    padding: 20pt 20pt;
+    border-style: solid;
+    border-width: 5pt;
+    width: 500pt;
+    height: 300pt;
+    border-radius: 15pt;
+    border-color: black;
+    position: absolute;
+    top: 50pt;
+    left: 240pt;
+    background-color: white;
+}
+caption#tituloresultado{
+    font-size: 60pt;
+    font-family: 'Pacifico', cursive;
+}
+td#leão{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/leão.jpg");
+}
+td#porco{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/porco.jpg");
+}
+td#golfinho{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/golfinho.jpg");
+}
+td#sapo{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/sapo.jpg");
+}
+td#panda{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/panda.jpg");
+}
+td#abelha{
+    background-repeat: no-repeat;
+    background-size: 80% 80% ;
+    background-image: url("imagens/abelha.jpg");
+    background-position-x: center;
+    background-position-y: center;
+}
+td#cachorro{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/cachorro.jpg");
+}
+td#elefante{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/elefante.jpg");
+}
+td#gato{
+    background-repeat: no-repeat;
+    background-size: 80% 100% ;
+    background-image: url("imagens/gato.jpg");
+    background-position-x: center;
+    background-position-y: center;
+}
+td#tartaruga{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/tartaruga.jpg");
+}
+td#coelho{
+    background-repeat: no-repeat;
+    background-size: 80% 100% ;
+    background-image: url("imagens/coelho.jpg");
+    background-position-x: center;
+    background-position-y: center;
+}
+td#jacare{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/jacare.jpg");
+}
+td#tucano{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/tucano.jpg");
+    background-size: 80% 100% ;
+    background-position-x: center;
+    background-position-y: center;
+}
+td#urso{
+    background-repeat: no-repeat;
+    background-size: 80% 100% ;
+    background-image: url("imagens/urso.jpg");
+    background-position-x: center;
+    background-position-y: center;
+}
+td#vaca{
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-image: url("imagens/vaca.jpg");
+}
+td#girafa{
+    background-repeat: no-repeat;
+    background-size: 80% 100% ;
+    background-image: url("imagens/girafa.jpg"); 
+    background-position-x: center;
+    background-position-y: center;
+}
+

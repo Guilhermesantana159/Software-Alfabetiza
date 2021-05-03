@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="sortcut icon" href="imagens/Capturar.PNG" type="image/PNG /">
+    <title>Alfabetiza</title>
+</head>
+<body>
+<section id="principal">
+    <div id="imagemresposta">   
+    </div>
+        <input type="text" id="respostaaluno" placeholder="Digite o Nome da Figura" maxlength="10pt" required>
+        <button id="enviarresposta" onclick="matrizresposta()">Enviar</button>    
+    <div id="informações">
+        <table id="informações"> 
+            <caption id="titulo">Aluno</caption>
+            <tr><td id="esquerdo">Nome:</td><td id="nome" class="direito">0</td></tr>
+            <tr><td id="esquerdo">Turma:</td><td id="turma" class="direito">0</td></tr>
+            <tr><td id="esquerdo">Tempo:</td><td id="tempom" class="direito">0 Minutos</td><td id="tempos" class="direito"></td></tr>
+            <tr><td id="esquerdo"> Figuras <br>Restantes:</td><td id="figuras" class="direito">0</td></tr>
+        </table>
+    </div>
+    <script>
+        var i = 0;
+        var respostaaluno = [];
+        var animais = localStorage.getItem("matriz");
+        var animais = animais.split(",")
+        var comp = animais.length; 
+        var nomealuno = localStorage.getItem("nome");
+        var turmaaluno = localStorage.getItem("turma");
+        var figurasaluno = localStorage.getItem("figuras");
+        var x = Number(figurasaluno)
+        document.getElementById("figuras").innerHTML = x ; 
+        document.getElementById("nome").innerHTML = nomealuno ;
+        document.getElementById("turma").innerHTML = turmaaluno;
+        function background(){
+            var item1 = animais[0];
+            var fundo = document.getElementById("imagemresposta");
+            if(item1=="jacare"){
+                fundo.style.backgroundImage = "url(imagens/jacare.jpg)";
+                animais.shift();  
+            }else if(item1=="vaca"){
+                fundo.style.backgroundImage = "url(imagens/vaca.jpg)";
+                animais.shift(); 
+            }else if(item1=="tartaruga"){
+                fundo.style.backgroundImage = "url(imagens/tartaruga.jpg)";
+                animais.shift(); 
+            }else if(item1=="urso"){
+                fundo.style.backgroundImage = "url(imagens/urso.jpg)";
+                animais.shift();
+            }else if(item1=="leão"){
+                fundo.style.backgroundImage = "url(imagens/leão.jpg)";
+                animais.shift();                    
+            }else if(item1=="coelho"){
+                fundo.style.backgroundImage = "url(imagens/coelho.jpg)";              
+                animais.shift();
+            }else if(item1=="panda"){
+                fundo.style.backgroundImage = "url(imagens/panda.jpg)";
+                animais.shift();                 
+            }else if(item1=="cachorro"){
+                fundo.style.backgroundImage = "url(imagens/cachorro.jpg)";
+                animais.shift();                  
+            }else if(item1=="girafa"){
+                fundo.style.backgroundImage = "url(imagens/girafa.jpg)";
+                animais.shift();                 
+            }else if(item1=="golfinho"){
+                fundo.style.backgroundImage = "url(imagens/golfinho.jpg)";
+                animais.shift();                  
+            }else if(item1=="sapo"){
+                fundo.style.backgroundImage = "url(imagens/sapo.jpg)";
+                animais.shift();                  
+            }else if(item1=="abelha"){
+                fundo.style.backgroundImage = "url(imagens/abelha.jpg)";                
+                animais.shift();
+            }else if(item1=="gato"){
+                fundo.style.backgroundImage = "url(imagens/gato.jpg)";
+                animais.shift();                  
+            }else if(item1=="porco"){
+                fundo.style.backgroundImage = "url(imagens/porco.jpg)";
+                animais.shift();                 
+            }else if(item1=="tucano"){
+                fundo.style.backgroundImage = "url(imagens/tucano.jpg)";
+                animais.shift();                 
+            }else{
+                fundo.style.backgroundImage = "url(imagens/elefante.jpg)";
+                animais.shift();
+            }
+        }
+        background();      
+        function matrizresposta(){
+            var z = document.getElementById("respostaaluno").value
+            if(!z){
+                alert("Nenhuma resposta computada!")
+                
+            }else{          
+            respostaaluno.unshift(z);
+            i= i + 1;
+            x = x - 1;
+            document.getElementById("figuras").innerHTML = x ; 
+            botão();
+            document.getElementById("respostaaluno").value = "";
+            background();
+            }
+        }
+        function botão(){
+            if(i==comp){
+                localStorage.setItem("resposta",respostaaluno);
+                window.location.href = "resultado.html";
+                localStorage.setItem("tempo", m);
+            }
+        }
+        var m=0;;
+        var y = setInterval(minutos,60000);
+        function minutos(){
+            m=m+1
+            document.getElementById("tempom").innerHTML = m + " Minutos";
+        }
+    </script>   
+</section>
+</body>
+</html>
