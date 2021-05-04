@@ -3,7 +3,7 @@
 /*Pagina index*/
 
 body{
-    background-image: url("imagens/imagemfundo.jpg");
+    background-image: url("../imagens/imagemfundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
